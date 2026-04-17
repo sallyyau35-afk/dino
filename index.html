@@ -183,7 +183,7 @@ function handleOrientation(event) {
 
         for (let i = obstacles.length - 1; i >= 0; i--) {
             let o = obstacles[i];
-            o.x -= (7 + (score / 400));
+            o.x -= (4 + (score / 500));
             
             ctx.imageSmoothingEnabled = false;
             if (cactusLoaded) {
