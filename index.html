@@ -113,20 +113,11 @@
     let timerInterval;
 
 function handleOrientation(event) {
-    let beta = event.beta; 
-    if (beta === null) return;
-
-    let diff = beta - 45; // 假設 45 度係平放
-
-    // 設定一個 3 度嘅緩衝區，唔使手震少少都郁
-    if (Math.abs(diff) < 3) {
-        tiltY = 0;
-    } else {
-        // 靈敏度系數改呢度 (例如 1.8)
-        tiltY = diff * 0.3; 
+        let beta = event.beta; 
+        if (beta === null) return;
+        tiltY = (beta - 45) * 0.7; 
     }
-}
-
+    
     function drawDino() {
         // --- 【關鍵：JS 繪製像素化處理】 ---
         ctx.imageSmoothingEnabled = false; 
