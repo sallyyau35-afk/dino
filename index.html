@@ -178,7 +178,7 @@ function handleOrientation(event) {
         drawDino();
 
         if (frame % 70 === 0) {
-            obstacles.push({ x: canvas.width, y: 50 + Math.random()*(canvas.height-150), w: 90, h: 120, passed: false });
+            obstacles.push({ x: canvas.width, y: 50 + Math.random()*(canvas.height-150), w: 70, h: 100, passed: false });
         }
 
         for (let i = obstacles.length - 1; i >= 0; i--) {
